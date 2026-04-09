@@ -15,6 +15,11 @@ public class ViewMenuPrincipal {
         
         while (opcionMenu ==0){
             System.out.println("Bienvenido, seleccione una opcion");
+            System.out.println("1. Operaciones matematicas ");
+            System.out.println("2. Operaciones de texto");
+            System.out.println("3. Operaciones de logica");
+            System.out.println("4. Salir del sistema");
+            System.out.println("4. Salir del sistema");
             opcionMenu = Integer.parseInt(leer.nextLine());
         }
     }
