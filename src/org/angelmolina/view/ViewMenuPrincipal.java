@@ -19,7 +19,6 @@ public class ViewMenuPrincipal {
             System.out.println("2. Operaciones de texto");
             System.out.println("3. Operaciones de logica");
             System.out.println("4. Salir del sistema");
-            System.out.println("4. Salir del sistema");
             opcionMenu = Integer.parseInt(leer.nextLine());
         }
     }
