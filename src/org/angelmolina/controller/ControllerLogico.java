@@ -8,6 +8,6 @@ package org.angelmolina.controller;
  *
  * @author informatica
  */
-public class ControllerLogica {
+public class ControllerLogico {
     
 }

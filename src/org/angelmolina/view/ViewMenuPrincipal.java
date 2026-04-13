@@ -2,6 +2,7 @@ package org.angelmolina.view;
 import java.util.Scanner;
 import org.angelmolina.controller.ControllerMatematicas;
 import org.angelmolina.controller.ControllerTexto;
+import org.angelmolina.controller.ControllerLogico;
  
 public class ViewMenuPrincipal {
     //global
@@ -22,6 +23,8 @@ public class ViewMenuPrincipal {
                case 2:
                    mostrarMenuTexto();
                    break;
+               case 3:
+                   mostrarMenuLogico();
            }
         }  while (opcionMenu !=4);
                 System.out.println("Nos vemos :)");
@@ -311,8 +314,7 @@ public class ViewMenuPrincipal {
                     System.out.println("\nPresione ENTER para continuar");
                     leer.nextLine();
                     break;
-                    
-                    
+                          
                     
              }
                     
@@ -324,7 +326,154 @@ public class ViewMenuPrincipal {
                      leer.nextLine();
                      Limpiar();
      }
+     public void mostrarMenuLogico(){
+         int opcionLogico = 0; 
+         ControllerLogico logico = new ControllerLogico();
+         do{
+             System.out.println("Menu de operaciones de Texto");
+             System.out.println("0. Regresar al menu Principal");
+             System.out.println("1. Verificador de Edad");
+             System.out.println("2. Numero Par");
+             System.out.println("3. Semaforo");
+             System.out.println("4. Rango Numerico");
+             System.out.println("5. Login Simple");
+             System.out.println("6. Mayor de Dos");
+             System.out.println("7. Año Bisiesto");
+             System.out.println("8. Aprobado/Reprobado");
+             System.out.println("9. Validador de Triangulo");
+             System.out.println("10. Comparador de Cadenas");
+             opcionLogico = Integer.parseInt(leer.nextLine()); 
+             Limpiar();
+             
+             switch(opcionLogico){
+                case 1: 
+                   System.out.println("Ingrese su edad");
+                     int edad = Integer.parseInt(leer.nextLine());
+                     // boolean esMayor = logica.verificarMayoriaEdad(edad);
+                    System.out.println("------------------------------------------");
+                    System.out.println("¿Es mayor de edad?: + esMayor");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 2:
+                    System.out.println("Ingrese un numero");
+                     int numPar = Integer.parseInt(leer.nextLine());
+                     // boolean esPar = logica.verificarPar(numPar);
+                    System.out.println("------------------------------------------");
+                    System.out.println("¿Es un numero par?: + esPar");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 3:
+                      System.out.println("Ingrese un color del semaforo");
+                     String color = leer.nextLine();
+                     // boolean queColorEs = logica.Semaforo(color);
+                     System.out.println("------------------------------------------");
+                     System.out.println("ahora + queColorEs");
+                     System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 4:
+                    System.out.println("Ingrese un numero:");
+                     int numInicial = Integer.parseInt(leer.nextLine());
+                    System.out.println("Ingrese un numero maximo:");
+                     int numMax = Integer.parseInt(leer.nextLine());
+                    System.out.println("Ingrese un numero minimo:");
+                     int numMin = Integer.parseInt(leer.nextLine());
+                     // boolean numRango = logica.verificarRango(numInicial,numMax,nuMin);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Tu numero es: + numRango");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 5:
+                    System.out.println("Ingrese su usuario:");
+                     String usuario = leer.nextLine();
+                    System.out.println("Ingrese su contrasena:");
+                     int password = Integer.parseInt(leer.nextLine());
+                     // boolean acceso = logica.login(usuario,password);
+                    System.out.println("------------------------------------------");
+                    System.out.println("login + acceso");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 6:
+                    System.out.println("Ingrese un numero:");
+                     int nume1 = Integer.parseInt(leer.nextLine());
+                    System.out.println("Ingrese un numero maximo:");
+                     int nume2 = Integer.parseInt(leer.nextLine());
+                     // boolean numMayot = logica.numeroMayor(nume1,nume2);
+                    System.out.println("------------------------------------------");
+                    System.out.println("El numero mayor es: + numMayor");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 7:
+                     System.out.println("Ingrese un año:");
+                     int año = Integer.parseInt(leer.nextLine());
+                     // boolean añoBisiesto = logica.calcularAñoBisiesto(año);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Tu año es: + añoBisiesto");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 8:
+                     System.out.println("Ingrese su nota final:");
+                     int notaFin = Integer.parseInt(leer.nextLine());
+                     // boolean  aprobadoReprobado= logica.verificarAprobadoReprobado(notaFin);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Tu: + aprobadoReprobado");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 9:
+                    System.out.println("Ingrese el lado N.1:");
+                     int lado1 = Integer.parseInt(leer.nextLine());
+                    System.out.println("Ingrese el lado N.2:");
+                     int lado2 = Integer.parseInt(leer.nextLine());
+                    System.out.println("Ingrese el lado N.3:");
+                     int lado3 = Integer.parseInt(leer.nextLine());
+                     // boolean totalLados = logica.verificarTriangulos(lado1,lado2,lado3);
+                    System.out.println("------------------------------------------");
+                    System.out.println("con los lados : + totalLados");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 10:
+                    System.out.println("Ingrese la primera palabra");
+                     String pal1 = leer.nextLine();
+                    System.out.println("Ingrese la segunda palabra");
+                     String pal2 = leer.nextLine();
+                     // boolean palabrasIguales = logica.comparaPalabras(pal1,pal2);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Las palabras : + palabrasIguales");
+                    System.out.println("------------------------------------------");
+                     System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                    
+                    
+                      
+             }
+         
+         
+         }while (opcionLogico != 0);
+            System.out.println("REGRESANDO");
+                 System.out.println("\nPresione ENTER para continuar");
+                     leer.nextLine();
+                     Limpiar();} 
 }
+
+
     
         
          
