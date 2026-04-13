@@ -1,6 +1,7 @@
 package org.angelmolina.view;
 import java.util.Scanner;
 import org.angelmolina.controller.ControllerMatematicas;
+import org.angelmolina.controller.ControllerTexto;
  
 public class ViewMenuPrincipal {
     //global
@@ -18,8 +19,12 @@ public class ViewMenuPrincipal {
                case 1:
                    mostrarMenuMatematicas();
                    break; 
+               case 2:
+                   mostrarMenuTexto();
+                   break;
            }
-        }  while (opcionMenu !=4); 
+        }  while (opcionMenu !=4);
+                System.out.println("Nos vemos :)");
     }
     
     public void Limpiar() {
@@ -161,11 +166,173 @@ public class ViewMenuPrincipal {
                      System.out.println("\nPresione ENTER para continuar");
                      leer.nextLine();
                      break;
-                    
-                    
                                         
             }
              
                  
-         }while (opcionMatematicas !=0);}
-    }  
+         }while (opcionMatematicas !=0);
+                 System.out.println("REGRESANDO");
+                 System.out.println("\nPresione ENTER para continuar");
+                     leer.nextLine();
+                     Limpiar();
+         
+     
+    }
+
+     public void mostrarMenuTexto(){
+         int opcionTexto = 0; 
+         ControllerTexto texto = new ControllerTexto();
+         do{
+             System.out.println("Menu de operaciones de Texto");
+             System.out.println("0. Regresar al menu Principal");
+             System.out.println("1. Concatenador de Nombre");
+             System.out.println("2. Contador de Longitud");
+             System.out.println("3. Inversor de Texto");
+             System.out.println("4. Detector de Vocales");
+             System.out.println("5. Extractor de Iniciales");
+             System.out.println("6. Normalizador a Mayusculas");
+             System.out.println("7. Conversor Binario");
+             System.out.println("8. Repetidor de Palabras");
+             System.out.println("9. Validador de Password");
+             System.out.println("10. Generador de Email");
+             opcionTexto = Integer.parseInt(leer.nextLine()); 
+             Limpiar();
+             
+             switch(opcionTexto){
+                case 1: 
+                    System.out.println("Ingrese su nombre"); 
+                    String nombre= leer.nextLine();
+                    System.out.println("Ingrese su apellido");
+                    String apellido = leer.nextLine();
+                  // String nombreCompleto = texto.concatenarNombres(nombre,apellido);
+                    System.out.println("--------------------------------");
+                    System.out.println("tu nombre completo es + nombre");
+                    System.out.println("---------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                    
+                case 2:
+                    System.out.println("Ingrese una palabra");
+                    String palabra =leer.nextLine();
+                    //int letras = contadorLetras(palabra);
+                    System.out.println("-----------------------------");
+                    System.out.println("la palabra contiene + letras");
+                    System.out.println("-----------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 3:
+                    System.out.println("Ingrese una palabra");
+                    String reves =leer.nextLine();
+                    //String revertir = palabraReves(reves);
+                    System.out.println("--------------------------");
+                    System.out.println("la palabra al reves es + revertir");
+                    System.out.println("--------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 4:
+                    System.out.println("Ingrese un caracter");
+                    String caracter =leer.nextLine();
+                    // boolean esVocal = texto.verificarSiEsVocal(caracter);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Es una vocal?: + esVocal");
+                    System.out.println("--------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 5:
+                   System.out.println("Ingrese su nombre"); 
+                    String nom = leer.nextLine();
+                    System.out.println("Ingrese su apellido");
+                    String apell = leer.nextLine();
+                  // String iniciales = texto.obtenerIniciales(nom,apell);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Las iniciales son: + iniciales");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                    
+                case 6:
+                    System.out.println("Ingrese un texto mixto");
+                    String textoMixto =leer.nextLine();
+                    // String textMayus = texto.convertirMayusculas(textoMixto);
+                    System.out.println("------------------------------------------");
+                    System.out.println("El texto en mayusculas es: + textMayus");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 7:
+                    System.out.println("Ingrese un numero binario");
+                    int binario = Integer.parseInt(leer.nextLine());
+                    // boolean comprobacion = texto.verificarParImpar(comprobacion);
+                    System.out.println("------------------------------------------");
+                    System.out.println("El numero binario es: + comproacion");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 8:
+                    System.out.println("Ingrese una palabra");
+                    String palabraRepetir = leer.nextLine();
+                    System.out.println("Ingrese el numero de veces que desea repetirla");
+                    int cantidad = Integer.parseInt(leer.nextLine());
+                    //  String repetir = texto.repetirPalabra(palabraRepetir,cantidad);
+                    System.out.println("------------------------------------------");
+                    System.out.println("palabra + repetir - 1");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 9:
+                     System.out.println("Ingrese una contrasena");
+                    String contra = leer.nextLine();
+                    // boolean esSegura = texto.validarContrasena(contra);
+                    System.out.println("------------------------------------------");
+                    System.out.println("La contrasena es: + esSegura");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                case 10:
+                     System.out.println("Ingrese un nombre"); 
+                    String name = leer.nextLine();
+                    System.out.println("Ingrese un apellido");
+                    String lastName = leer.nextLine();
+                    System.out.println("Ingrese un dominio");
+                    String dominio= leer.nextLine();
+                    // String Correo = texto.concatenarCorreo(name,lastName,correo);
+                    System.out.println("------------------------------------------");
+                    System.out.println("Su correo es: + correo ");
+                    System.out.println("------------------------------------------");
+                    System.out.println("\nPresione ENTER para continuar");
+                    leer.nextLine();
+                    break;
+                    
+                    
+                    
+             }
+                    
+            
+             
+         }while (opcionTexto != 0);
+            System.out.println("REGRESANDO");
+                 System.out.println("\nPresione ENTER para continuar");
+                     leer.nextLine();
+                     Limpiar();
+     }
+}
+    
+        
+         
+
+    
+    
+
+
+    
+             
+             
